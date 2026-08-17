@@ -1,0 +1,37 @@
+# Binary label mapping for the current mouse workbook.
+# Preserve original group names in all processed outputs.
+#
+# 0 = non-cancer
+# 1 = cancer / tumor model
+#
+# IMPORTANT:
+# Confirm the experimental meaning of CFPAC A1/A2 against the animal protocol.
+
+groups:
+  control:
+    label: 0
+    role: non-cancer_control
+
+  MC38:
+    label: 1
+    role: cancer_model
+
+  ID8 s.c.:
+    label: 1
+    role: cancer_model_subcutaneous
+
+  ID8 i.p.:
+    label: 1
+    role: cancer_model_intraperitoneal
+
+  CFPAC:
+    label: 1
+    role: cancer_model
+
+  CFPAC A1:
+    label: 1
+    role: cancer_experimental_subgroup_confirm_protocol
+
+  CFPAC A2:
+    label: 1
+    role: cancer_experimental_subgroup_confirm_protocol

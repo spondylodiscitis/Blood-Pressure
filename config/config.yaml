@@ -1,0 +1,57 @@
+paths:
+  ca_dir: /home/ads_lj/visiontask/혈압/data/ca
+  nca_dir: /home/ads_lj/visiontask/혈압/data/nca
+  mouse_xlsx: /home/ads_lj/visiontask/혈압/data/mouse 혈압 결과.xlsx
+  output_dir: outputs
+  log_dir: logs
+
+human:
+  patient_id_col: 연구번호
+  window_days: 7
+  min_measurement_days: 4
+
+  day_night:
+    day_start: "06:00"
+    night_start: "18:00"
+
+  vital_signs:
+    prefer_cleaned_bp: true
+    systolic_clean_col: BP(S)_클린징
+    diastolic_clean_col: BP(D)_클린징
+    systolic_raw_col: BP(S)
+    diastolic_raw_col: BP(D)
+
+  surgery:
+    ca_preop_only: true
+    nca_allow_postop: true
+    # This asymmetric rule is exploratory and should be tested against a strict symmetric analysis.
+
+  medication:
+    exposure_date_priority:
+      - 실시일자
+      - 처방일자
+    censor_from_exposure_date: true
+    dictionary_path: config/BP_IMPACTING_DRUGS.csv
+
+split:
+  random_seed: 42
+  train_fraction: 0.70
+  validation_fraction: 0.15
+  test_fraction: 0.15
+  group_by_patient: true
+
+mouse:
+  year: 2025
+  mapping_path: config/mouse_group_mapping.yaml
+  zero_only_measurement_as_missing: true
+  minimum_valid_measurements: 2
+
+evaluation:
+  threshold: 0.5
+  metrics:
+    - auroc
+    - balanced_accuracy
+    - sensitivity
+    - specificity
+    - f1
+    - accuracy

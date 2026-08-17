@@ -1,0 +1,13 @@
+﻿ingredient_normalized,category,expected_bp_effect,include_for_censoring,review_status,note
+norepinephrine,vasopressor,increase,1,example_only,Confirm exact ingredient naming in raw data
+epinephrine,vasopressor/inotrope,increase,1,example_only,Confirm exact ingredient naming in raw data
+phenylephrine,vasopressor,increase,1,example_only,Confirm exact ingredient naming in raw data
+vasopressin,vasopressor,increase,1,example_only,Confirm exact ingredient naming in raw data
+dopamine,vasopressor/inotrope,variable,1,example_only,Dose-dependent effect
+dobutamine,inotrope,variable,1,example_only,Potential hemodynamic effect
+nicardipine,antihypertensive,decrease,1,example_only,Confirm exact ingredient naming in raw data
+labetalol,antihypertensive,decrease,1,example_only,Confirm exact ingredient naming in raw data
+hydralazine,antihypertensive,decrease,1,example_only,Confirm exact ingredient naming in raw data
+furosemide,diuretic,variable/decrease,1,example_only,Volume-mediated BP effect
+propofol,sedative/anesthetic,decrease,1,example_only,Peri-procedural confounder
+midazolam,sedative,variable/decrease,1,example_only,Potential hemodynamic effect
